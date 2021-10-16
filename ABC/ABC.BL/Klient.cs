@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ABC.BL
+﻿namespace ABC.BL
 {
     public class Klient
     {
@@ -31,7 +25,7 @@ namespace ABC.BL
         {
             get
             {
-                return Nazwisko + "," + Imie;
+                return Imie + ", " + Nazwisko;
             }
         }
     }
