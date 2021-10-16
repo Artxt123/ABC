@@ -2,18 +2,21 @@
 {
     public class Klient
     {
-        private string _nazwisko;
+        public static int Licznik { get; set; } //właściwość static oznacza, że ta właściwość należy tylko do tej klasy, a nie do instancji tej klasy (nie do konkretnych obiektów, które zostaną utworzone); będzie się można odwołać do właściwości licznik, tylko w ten sposób: Klient.Licznik 
+
+        private string nazwisko;
         public string Nazwisko
         {
             get
             {
                 //tu też można wstawić dowolną ilość kodu
-                return _nazwisko;
+                return nazwisko;
             }
             set
             {
                 //tu też można wstawić dowolną ilość kodu
-                _nazwisko = value;
+                if (!string.IsNullOrWhiteSpace(value))
+                    nazwisko = value;
             }
         }
 

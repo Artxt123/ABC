@@ -50,5 +50,24 @@ namespace ABC.BLTest
             //Assert (potwierdź test)
             Assert.AreEqual(oczekiwana, aktualna);
         }
+        [TestMethod]
+        public void StaticTest()
+        {
+            // Arrange (zaaranżuj test)
+            Klient klient1 = new Klient();
+            klient1.Imie = "Artur";
+            Klient.Licznik++;
+            
+            Klient klient2 = new Klient();
+            klient2.Imie = "Marysia"; 
+            Klient.Licznik++;
+
+            Klient klient3 = new Klient();
+            klient3.Imie = "Zosia";
+            Klient.Licznik++;
+
+            //Assert (potwierdź test)
+            Assert.AreEqual(3, Klient.Licznik);
+        }
     }
 }
