@@ -26,7 +26,7 @@ namespace ABC.BL
         // Właściwość automatyczna, robi to samo co właściwość Nazwisko, tylko, że dla pola imie
         public string Imie { get; set; }
         public string Email { get; set; }
-        public int KlientId { get; private set; }
+        public int KlientId { get; private set; } //snippet propg Set na private, zamist go usuwać, aby miec do niego dostęp w obrębie tej klasy. Inni i tak nie będą mieli do niego dostępu
         public string ImieNazwisko
         {
             get
