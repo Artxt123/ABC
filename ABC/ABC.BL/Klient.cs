@@ -53,6 +53,10 @@ namespace ABC.BL
             }
         }
 
+        /// <summary>
+        /// Sprawdzamy, czy zostały ustawione wymagane wartości (Nazwisko, Email)
+        /// </summary>
+        /// <returns></returns>
         public bool Zwaliduj()
         {
             var poprawne = true;
@@ -63,6 +67,7 @@ namespace ABC.BL
 
             return poprawne;
         }
+
         /// <summary>
         /// Zapisujemy obecnego klienta
         /// </summary>
@@ -72,11 +77,22 @@ namespace ABC.BL
             // Tu ma być kod, który zapisuje zdefiniowanego klienta
             return true;
         }
+
+        /// <summary>
+        /// Pobieramy jednego klienta
+        /// </summary>
+        /// <param name="klientId">ID klienta, którego chcemy pobrać</param>
+        /// <returns></returns>
         public Klient Pobierz(int klientId)
         {
             //Tu ma być kod, który pobiera określonego klienta; wskazanego po ID
             return new Klient();
         }
+        
+        /// <summary>
+        /// Pobieramy listę wszystkich klientów
+        /// </summary>
+        /// <returns></returns>
         public List<Klient> Pobierz()
         {
             //Tu ma być kod, który wypisuje listę wszystkich klientów
