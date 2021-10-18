@@ -57,9 +57,9 @@ namespace ABC.BLTest
             Klient klient1 = new Klient();
             klient1.Imie = "Artur";
             Klient.Licznik++;
-            
+
             Klient klient2 = new Klient();
-            klient2.Imie = "Marysia"; 
+            klient2.Imie = "Marysia";
             Klient.Licznik++;
 
             Klient klient3 = new Klient();
@@ -68,6 +68,35 @@ namespace ABC.BLTest
 
             //Assert (potwierdź test)
             Assert.AreEqual(3, Klient.Licznik);
+        }
+        [TestMethod]
+        public void ZwalidujTest()
+        {
+            // Arrange (zaaranżuj test)
+            Klient klient = new Klient();
+            klient.Nazwisko = "Oczkowski";
+            klient.Email = "oczkowski@o2.pl";
+            var oczekiwana = true;
+
+            //ACT (działaj)
+            var aktualna = klient.Zwaliduj();
+
+            //Assert (potwierdź test)
+            Assert.AreEqual(oczekiwana, aktualna);
+        }
+        [TestMethod]
+        public void ZwalidujBrakNazwiska()
+        {
+            // Arrange (zaaranżuj test)
+            Klient klient = new Klient();
+            klient.Email = "oczkowski@o2.pl";
+            var oczekiwana = false;
+
+            //ACT (działaj)
+            var aktualna = klient.Zwaliduj();
+
+            //Assert (potwierdź test)
+            Assert.AreEqual(oczekiwana, aktualna);
         }
     }
 }

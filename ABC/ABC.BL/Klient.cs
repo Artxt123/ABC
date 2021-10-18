@@ -1,4 +1,6 @@
-﻿namespace ABC.BL
+﻿using System.Collections.Generic;
+
+namespace ABC.BL
 {
     public class Klient
     {
@@ -28,6 +30,7 @@
         {
             get
             {
+                //Poniższy kod sprawia, że w razie wystąpienia samego Imienia, bądź samego Nazwiska, nie zostanie dodany ", "
                 string imieNazwisko = Imie;
                 if (!string.IsNullOrWhiteSpace(Nazwisko))
                 {
@@ -39,6 +42,36 @@
                 }
                 return imieNazwisko;
             }
+        }
+
+        public bool Zwaliduj()
+        {
+            var poprawne = true;
+            if (string.IsNullOrWhiteSpace(Nazwisko))
+                poprawne = false;
+            if (string.IsNullOrWhiteSpace(Email))
+                poprawne = false;
+
+            return poprawne;
+        }
+        /// <summary>
+        /// Zapisujemy obecnego klienta
+        /// </summary>
+        /// <returns></returns>
+        public bool Zapisz()
+        {
+            // Tu ma być kod, który zapisuje zdefiniowanego klienta
+            return true;
+        }
+        public Klient Pobierz(int klientId)
+        {
+            //Tu ma być kod, który pobiera określonego klienta; wskazanego po ID
+            return new Klient();
+        }
+        public List<Klient> Pobierz()
+        {
+            //Tu ma być kod, który wypisuje listę wszystkich klientów
+            return new List<Klient>();
         }
     }
 }
