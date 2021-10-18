@@ -4,6 +4,15 @@ namespace ABC.BL
 {
     public class Klient
     {
+        //Jak chcemy utworzyć specjalny konstruktor, to i tak musimy utworzyć konstruktor podstawowy, żeby można było użyc konstruktora bez żadnych parametrów
+        public Klient()
+        {
+
+        }
+        public Klient(int klientId)
+        {
+            KlientId = klientId;
+        }
         public static int Licznik { get; set; } //właściwość static oznacza, że ta właściwość należy tylko do tej klasy, a nie do instancji tej klasy (nie do konkretnych obiektów, które zostaną utworzone); będzie się można odwołać do właściwości licznik, tylko w ten sposób: Klient.Licznik 
 
         private string nazwisko;
