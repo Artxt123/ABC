@@ -29,7 +29,7 @@ namespace ABC.BL
                 klient.Nazwisko = "Oczkowski";
             }
 
-            return new Klient();
+            return klient;
         }
 
         /// <summary>
