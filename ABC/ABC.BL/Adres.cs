@@ -1,6 +1,6 @@
 ﻿namespace ABC.BL
 {
-    class Adres
+    public class Adres
     {
         public Adres()
         {
