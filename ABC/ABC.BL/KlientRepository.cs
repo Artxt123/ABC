@@ -16,10 +16,10 @@ namespace ABC.BL
         /// <returns></returns>
         public Klient Pobierz(int klientId)
         {
-            // Tworzymy instancję klienta
+            // Tworzymy instancję klienta i przekazujemy identyfikator
             Klient klient = new Klient(klientId);
 
-            //Tu ma być kod, który pobiera określonego klienta; wskazanego po ID
+            //Tu ma być rzeczywisty kod, który pobiera określonego klienta; wskazanego po ID
 
             // Tymczasowe zakodowane wartości, aby zwrócić klienta
             if (klientId == 1)
