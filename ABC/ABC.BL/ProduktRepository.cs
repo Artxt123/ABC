@@ -9,7 +9,7 @@
         /// <returns></returns>
         public Produkt Pobierz(int produktId)
         {
-            // Tworzymy instancję klienta i przekazujemy identyfikator
+            // Tworzymy instancję produktu i przekazujemy identyfikator
             Produkt produkt = new Produkt(produktId);
 
             //Tu ma być rzeczywisty kod, który pobierze produkt o wskazanym ID
