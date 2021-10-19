@@ -5,16 +5,18 @@ namespace ABC.BL
     public class Klient
     {
         //Jak chcemy utworzyć specjalny konstruktor, to i tak musimy utworzyć konstruktor podstawowy, żeby można było użyc konstruktora bez żadnych parametrów
-        public Klient()
+        public Klient() : this(0) //domyślny konstruktor będzie zawsze wywoływał konstruktor, który jest poniżej, bo on tworzy pustą listę adresów, która inaczej byłaby nullem; klientId będzie domyślnie ustawiane na 0, ale i tak było na tyle ustawiane, nawet bez łączenia konstruktorów
         {
 
         }
         public Klient(int klientId)
         {
             KlientId = klientId;
+            ListaAdresow = new List<Adres>();
         }
         public static int Licznik { get; set; } //właściwość static oznacza, że ta właściwość należy tylko do tej klasy, a nie do instancji tej klasy (nie do konkretnych obiektów, które zostaną utworzone); będzie się można odwołać do właściwości licznik, tylko w ten sposób: Klient.Licznik 
 
+        public List<Adres> ListaAdresow { get; set; } //domyślnie ListaAdresow będzie nullem, a to nie jest dobre, dlatego musimy utworzyć pustą listę adresów w konstruktorze (wtedy będzie pusta, ale nie będzie nullem)
         private string nazwisko;
         public string Nazwisko
         {
