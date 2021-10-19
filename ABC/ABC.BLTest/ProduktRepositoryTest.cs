@@ -22,6 +22,7 @@ namespace ABC.BLTest
             var aktualna = produktRepository.Pobierz(2);
 
             //Assert
+            Assert.AreEqual(oczekiwana.ProduktId, aktualna.ProduktId);
             Assert.AreEqual(oczekiwana.NazwaProduktu, aktualna.NazwaProduktu);
             Assert.AreEqual(oczekiwana.Opis, aktualna.Opis);
             Assert.AreEqual(oczekiwana.AktualnaCena, aktualna.AktualnaCena);
