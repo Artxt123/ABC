@@ -8,6 +8,12 @@ namespace ABC.BL
 {
     public class KlientRepository
     {
+        //Klientrepository będzie współpracował z AdresRepository, dlatego tworzymy tutaj takie pole, aby można go było użyć w kodzie
+        public AdresRepository adresRepository { get; set; }
+        public KlientRepository()
+        {
+            adresRepository = new AdresRepository();
+        }
 
         /// <summary>
         /// Pobieramy jednego klienta
@@ -18,6 +24,8 @@ namespace ABC.BL
         {
             // Tworzymy instancję klienta i przekazujemy identyfikator
             Klient klient = new Klient(klientId);
+            //Pobieramy listę adresów dla Klienta, wykorzystując jego ID; korzystamy z klasy AdresRepository i metody PobierzPoKlientId
+            klient.ListaAdresow = adresRepository.PobierzPoKlientId(klientId).ToList();
 
             //Tu ma być rzeczywisty kod, który pobiera określonego klienta; wskazanego po ID
 
