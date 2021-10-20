@@ -54,6 +54,7 @@ namespace ABC.BL
                 return imieNazwisko;
             }
         }
+        public int KlientTyp { get; set; }
 
         /// <summary>
         /// Sprawdzamy, czy zostały ustawione wymagane wartości (Nazwisko, Email)
