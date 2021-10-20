@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ABC.BL
 {
@@ -15,6 +16,9 @@ namespace ABC.BL
 
         public int ZamowienieId { get; private set; }
         public DateTimeOffset? DataZamowienia { get; set; } //? oznacza, że to jest nullable, czyli, że może być typu DateTimeOffset lub być nullem, dzięki temu będziemy w łatwy sposób wiedzieć czy ta właściwość została ustawiona, czy nie
+        public List<PozycjaZamowienia> pozycjaZamowienia { get; set; }
+        public int KlientId { get; set; }
+        public int AdresDostawyId { get; set; }
 
         /// <summary>
         /// Pobieramy jedno wskazane zamowienie
