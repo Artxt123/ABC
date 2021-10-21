@@ -53,5 +53,9 @@ namespace ABC.BL
 
             return poprawne;
         }
+        public override string ToString()
+        {
+            return DataZamowienia.Value.Date + " (" + ZamowienieId + ")";
+        }
     }
 }
