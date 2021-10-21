@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ABC.BL
 {
-    public class Zamowienie
+    public class Zamowienie : KlasaBazowa
     {
         public Zamowienie()
         {
@@ -45,7 +45,7 @@ namespace ABC.BL
         /// Sprawdzamy dane zamówienia
         /// </summary>
         /// <returns></returns>
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawne = true;
             if (DataZamowienia == null) //Jeżeli data zamówienia nie jest ustawiona to zwracamy false

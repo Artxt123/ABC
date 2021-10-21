@@ -34,10 +34,26 @@ namespace ABC.BL
         /// Zapisujemy aktualny produkt
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Produkt produkt)
         {
-            //Tu ma być kod, który zapisuje aktualny produkt
-            return true;
+            //Kod, który zapisuje zdefiniowany produkt
+            var sukces = true;
+
+            //Jezeli cos pójdzie w trakcie nie tak, to modyfikujemy kod w taki sposób, aby w którymś z ifów zmieniał sukces na false
+
+            //Jeżeli obiekt nie ma zmiany lub dane nie są prawidłowe to go nie wprowadzamy lub nie aktualizujemy
+            if (produkt.MaZmiany && produkt.DaneSaPrawidlowe)
+            {
+                if (produkt.JestNowy)
+                {
+                    // Wywyołuemy procedurę składowaną INSERT
+                }
+                else //Jeżeli produkt nie jest nowy lub został usunięty to AKTUALIZUJEMY jego dane i status
+                {
+                    // Wywyołuemy procedurę składowaną UPDATE
+                }
+            }
+            return sukces;
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ABC.BL
 {
-    public class Klient
+    public class Klient : KlasaBazowa
     {
         //Jak chcemy utworzyć specjalny konstruktor, to i tak musimy utworzyć konstruktor podstawowy, żeby można było użyc konstruktora bez żadnych parametrów
         public Klient() : this(0) //domyślny konstruktor będzie zawsze wywoływał konstruktor, który jest poniżej, bo on tworzy pustą listę adresów, która inaczej byłaby nullem; klientId będzie domyślnie ustawiane na 0, ale i tak było na tyle ustawiane, nawet bez łączenia konstruktorów
@@ -60,7 +60,7 @@ namespace ABC.BL
         /// Sprawdzamy, czy zostały ustawione wymagane wartości (Nazwisko, Email)
         /// </summary>
         /// <returns></returns>
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawne = true;
             if (string.IsNullOrWhiteSpace(Nazwisko))

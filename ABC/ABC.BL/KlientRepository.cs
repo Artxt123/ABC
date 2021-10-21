@@ -53,10 +53,26 @@ namespace ABC.BL
         /// Zapisujemy obecnego klienta
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Klient klient)
         {
-            // Tu ma być kod, który zapisuje zdefiniowanego klienta
-            return true;
+            //Kod, który zapisuje zdefiniowany produkt
+            var sukces = true;
+
+            //Jezeli cos pójdzie w trakcie nie tak, to modyfikujemy kod w taki sposób, aby w którymś z ifów zmieniał sukces na false
+
+            //Jeżeli obiekt nie ma zmiany lub dane nie są prawidłowe to go nie wprowadzamy lub nie aktualizujemy
+            if (klient.MaZmiany && klient.DaneSaPrawidlowe)
+            {
+                if (klient.JestNowy)
+                {
+                    // Wywyołuemy procedurę składowaną INSERT
+                }
+                else //Jeżeli produkt nie jest nowy lub został usunięty to AKTUALIZUJEMY jego dane i status
+                {
+                    // Wywyołuemy procedurę składowaną UPDATE
+                }
+            }
+            return sukces;
         }
     }
 }
