@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 
 namespace ABC.BL
 {
@@ -20,7 +21,11 @@ namespace ABC.BL
 
         public string NazwaProduktu
         {
-            get { return _NazwaProduktu; }
+            get
+            {
+                var obslugaStringa = new ObslugaStringa();
+                return obslugaStringa.WstawSpacje(_NazwaProduktu);
+            }
             set { _NazwaProduktu = value; }
         }
 
