@@ -1,8 +1,8 @@
 ﻿namespace Common
 {
-    public class ObslugaStringa
+    public static class ObslugaStringa //klasa statyczna nie może zostać utworzona
     {
-        public string WstawSpacje(string zrodlo)
+        public static string WstawSpacje(string zrodlo) //aby wywolać metodę statyczną nie musimy tworzyć instancji klasy (nie musimy tworzyć nowego obiektu, tylko podając nazwę klasy możemy od razu odwołać się do metody statycznej
         {
             var wynik = string.Empty;
 
