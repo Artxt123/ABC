@@ -105,5 +105,16 @@ namespace ABC.BL
         {
             return ImieNazwisko;
         }
+
+        //Informacje, które chcemy zalogować
+        public string Log()
+        {
+            //Podajemy informacje jakie chcemy zalogować
+            var logTekst = KlientId + ": " +
+                           ImieNazwisko + " " +
+                           "Email: " + Email + " " +
+                           "Status: " + StanObiektu.ToString();
+            return logTekst;
+        }
     }
 }

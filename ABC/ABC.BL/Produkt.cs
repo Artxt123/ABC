@@ -66,5 +66,15 @@ namespace ABC.BL
         {
             return NazwaProduktu;
         }
+
+        //Informacje, które chcemy zalogować
+        public string Log()
+        {
+            var logTekst = ProduktId + ": " +
+                           NazwaProduktu + " " +
+                           "Opis: " + Opis + " " +
+                           "Status: " + StanObiektu.ToString();
+            return logTekst;
+        }
     }
 }
