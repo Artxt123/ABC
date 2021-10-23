@@ -17,7 +17,7 @@ namespace ABC.BL
 
         public int ZamowienieId { get; private set; }
         public DateTimeOffset? DataZamowienia { get; set; } //? oznacza, że to jest nullable, czyli, że może być typu DateTimeOffset lub być nullem, dzięki temu będziemy w łatwy sposób wiedzieć czy ta właściwość została ustawiona, czy nie
-        public List<PozycjaZamowienia> pozycjaZamowienia { get; set; }
+        public List<PozycjaZamowienia> PozycjaZamowienia { get; set; }
         public int KlientId { get; set; }
         public int AdresDostawyId { get; set; }
 
@@ -62,7 +62,7 @@ namespace ABC.BL
         public string Log()
         {
             var logTekst = ZamowienieId + ": " +
-                           "Data: " + DataZamowienia.Value.Date + " " +
+                           "Data: " + DataZamowienia.Value.UtcDateTime + " " +
                            "Status: " + StanObiektu.ToString();
             return logTekst;
         }
