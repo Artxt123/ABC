@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Common
 {
     public class UslugaLogowanie
     {
-        public static void PiszDoPliku(List<Object> ZmienioneElementy)
+        public static void PiszDoPliku(List<ILogowanie> ZmienioneElementy)
         {
             foreach (var element in ZmienioneElementy)
             {
-                //Console.WriteLine(element.);
+                //Normalnie zapisujemy dane logowania do pliku; tutaj wypisujemy je tylko na ekran
+                Console.WriteLine(element.Log());
             }
         }
     }
