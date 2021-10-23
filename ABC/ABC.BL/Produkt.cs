@@ -3,7 +3,7 @@ using System;
 
 namespace ABC.BL
 {
-    public class Produkt : KlasaBazowa
+    public class Produkt : KlasaBazowa, ILogowanie
     {
         public Produkt()
         {

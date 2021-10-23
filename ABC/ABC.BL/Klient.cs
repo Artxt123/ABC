@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Common;
+using System.Collections.Generic;
 
 namespace ABC.BL
 {
-    public class Klient : KlasaBazowa
+    public class Klient : KlasaBazowa, ILogowanie
     {
         //Jak chcemy utworzyć specjalny konstruktor, to i tak musimy utworzyć konstruktor podstawowy, żeby można było użyc konstruktora bez żadnych parametrów
         public Klient() : this(0) //domyślny konstruktor będzie zawsze wywoływał konstruktor, który jest poniżej, bo on tworzy pustą listę adresów, która inaczej byłaby nullem; klientId będzie domyślnie ustawiane na 0, ale i tak było na tyle ustawiane, nawet bez łączenia konstruktorów
